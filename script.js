@@ -72,3 +72,34 @@ document.getElementById("userForm").addEventListener('submit', function(event) {
     console.log("User Input as an Object:", userInput)
 });
 
+//define changeColor()
+
+const box = document.getElementById("box");
+
+function changeBackgroundColor(event) {
+    clickedElement = event.target;
+    if (clickedElement.style.backgroundColor == "lightblue") {
+        clickedElement.style.backgroundColor = "";
+    } else {
+        clickedElement.style.backgroundColor = "lightblue";
+    };
+}
+
+function changeColor(event) {
+    clickedElement = event.target;
+    if (clickedElement.style.color == "blue") {
+        clickedElement.style.color = "red";
+    } else {
+        clickedElement.style.color = "blue";
+    };
+}
+
+box.addEventListener('click', changeBackgroundColor);
+
+effect2.addEventListener('mouseover', changeColor);
+
+userName.addEventListener('focus', changeBackgroundColor);
+
+userEmail.addEventListener('keydown', changeBackgroundColor);
+
+message.addEventListener('input', changeColor);
